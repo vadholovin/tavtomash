@@ -1,0 +1,63 @@
+.hamburger {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 30px;
+  outline: 0;
+  z-index: 10000;
+  cursor: pointer;
+  // width: 22px;
+  // height: 16px;
+  // margin-right: 30px;
+
+  @media (min-width: 576px) {
+    // margin-left: 16px;
+    // margin-right: 35px;
+  }
+
+  @media (min-width: 1200px) {
+    display: none;
+  }
+
+  &:hover .bar,
+  &:focus .bar {
+    background-color: #fff;
+  }
+}
+
+.bar {
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  margin-left: -11px;;
+  width: 20px;
+  height: 2px;
+  background-color: #d8d8d8;
+  transition: opacity 0.4s, transform 0.4s, background-color 0.15s ease-in-out;
+
+  &--1 {
+    top: 23px;
+  }
+
+  &--2,
+  &--3 {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &--4 {
+    bottom: 23px;
+  }
+}
+
+.open .bar--1,
+.open .bar--4 {
+  opacity: 0;
+}
+
+.open .bar--2 {
+  transform: rotate(-45deg);
+}
+.open .bar--3 {
+  transform: rotate(45deg);
+}

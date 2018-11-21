@@ -1,0 +1,52 @@
+/*------------------------------------------*/
+/*  PAGINATION
+/*------------------------------------------*/
+.pagination {
+  text-align: center;
+  padding-bottom: 10px;
+
+  &-list {
+    display: inline-block;
+    list-style: none;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: 4px;
+  }
+
+  a {
+    display: block;
+    height: 34px;
+    min-width: 34px;
+    padding: 0 5px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 34px;
+    transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+
+    &:hover,
+    &:focus {
+      border-color: $mainRed;
+      color: $mainRed;
+    }
+  }
+
+  &__current-item {
+    display: block;
+    height: 34px;
+    min-width: 34px;
+    padding: 0 5px;
+    border: 1px solid $mainBlue;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 34px;
+    color: #fff;
+    background: $mainBlue;
+  }
+}

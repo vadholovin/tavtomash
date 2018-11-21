@@ -1,0 +1,164 @@
+/*------------------------------------------*/
+/*  MODAL FORM
+/*------------------------------------------*/
+.modal-box {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.modal-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(#353535, 0.80);
+  z-index: 9999;
+}
+
+.is-hidden-box .modal-body {
+  opacity: 0;
+}
+
+.modal-body {
+  position: fixed;
+  top: 60px; // fixed header's height
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: #fff;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 99999;
+
+  @media (min-width: 576px) {
+    max-width: 320px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal-form {
+  position: relative;
+  padding: 60px 15px 25px 15px;
+
+  @media (min-width: 576px) {
+    padding: 32px 24px 24px 24px;
+  }
+}
+
+  .modal-close {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 16px;
+    right: 16px;
+    background-image: url(../img/icons/ic-close-button-dark.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 16px 16px;
+    cursor: pointer;
+
+    @media (min-width: 576px) {
+      top: -5px;
+      right: -5px;
+      transform: translate(100%, -100%);
+      color: #fff;
+      background-image: url(../img/icons/ic-close-button-white.svg);
+      background-size: 14px 14px;
+    }
+  }
+  
+  .modal-title {
+    font-family: $secondFont;
+    margin-bottom: 20px;
+    font-size: rem(20);
+    font-weight: bold;
+    text-transform: uppercase;
+
+    @media (min-width: 576px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .modal-form__label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: $extraFont;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+
+    @media (min-width: 576px) {
+      margin-bottom: 8px;
+    }
+  }
+
+  .modal-form .field-container {
+    position: relative;
+    margin-bottom: 35px;
+    width: 100%;
+    height: 32px;
+    border-radius: 5px;
+
+    @media (min-width: 576px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .modal-form__field {
+    display: block;
+    width: 100%;
+    height: 32px;
+    padding: 8px;
+    border: 0;
+    background: #DDE4EE;
+    border-radius: 5px;
+
+    font-size: 14px;
+    color: #353535;
+  }
+
+  .agreement-checkbox {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+    input {
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    .personal-date {
+      font-size: rem(13);
+
+      a {
+        color: $mainBlue;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .modal-form .button {
+    display: block;
+    width: 100%;
+  }
+
+  [id$="error"] {
+    position: absolute;
+    display: inline-block;
+    top: -10px;
+    right: 0;
+    transform: translateY(-100%);
+    font-size: rem(14);
+    color: $mainRed;
+  }
+
+  .agreement-checkbox [id$="error"] {
+    top: 100%;
+    right: auto;
+    bottom: 0;
+    left: 0;
+  }

@@ -1,0 +1,196 @@
+/*------------------------------------------*/
+/*  HEADER
+/*------------------------------------------*/
+.header {
+  position: relative;
+  // padding-top: 12px;
+  background-image: url(../img/bg-header.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  color: #fff;
+  z-index: 99999;
+
+  @media (min-width: 1200px) {
+    padding-top: 32px;
+    z-index: 50;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  &--invisible {
+    opacity: 0;
+    top: -60px; // header height
+  }
+
+  &--scroll-fixed {
+    opacity: 1 !important;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: opacity .3s linear, top .3s linear;
+    z-index: 999999;
+  }
+
+  &__first-col,
+  &__second-col {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__first-col {
+    // padding-bottom: 12px;
+
+    @media (max-width: 575px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @media (min-width: 1200px) {
+      // justify-content: space-between;
+      padding-bottom: 16px;
+    }
+  }
+
+  &__second-col {
+    display: none;
+
+    @media (min-width: 1200px) {
+      display: flex;
+    }
+  }
+
+  .search-form {
+
+    @media (min-width: 1200px) {
+      margin-left: 40px;
+      margin-right: auto;
+    }
+  }
+
+  &-phone {
+    font-weight: bold;
+    display: none;
+
+    @media (min-width: 1200px) {
+      display: block;
+      transition: color 0.15s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: rgba(255,255,255,0.8);
+    }
+  }
+
+  .call-trigger {
+
+    @media (max-width: 1199.97px) {
+      font-size: 0;
+      margin-right: 10px;
+      // padding: 2px;
+      padding: 20px 12px;
+      border: 0;
+      border-radius: 5px;
+      background: transparent;
+      cursor: pointer;
+      transition: background 0.15s ease-in-out;
+    }
+
+    @media (max-width: 575.97px) {
+      // margin-right: 22px;
+    }
+
+    @media (min-width: 1200px) {
+      margin-right: 16px;
+    }
+
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 20px;
+      height: 20px;
+      background-image: url(../img/icons/ic-phone.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      transition: background-image  0.15s ease-in-out;
+
+      @media (min-width: 1200px) {
+        display: none;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      outline: 0;
+
+      &::before {
+        background-image: url(../img/icons/ic-phone-white.svg);
+      }
+    }
+  }
+
+  .download-price {
+    display: none;
+
+    @media (min-width: 1200px) {
+      display: inline-block;
+      margin-right: 24px;
+    }
+  }
+
+  .search-toggle {
+    margin-right: 10px;
+    // padding: 2px;
+    padding: 20px 12px;
+    border: 0;
+    border-radius: 5px;
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.15s ease-in-out;
+  
+    @media (min-width: 576px) {
+      // margin-right: 40px;
+    }
+  
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 18px;
+      height: 18px;
+      background-image: url(../img/icons/ic-search-light.svg);
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      transition: background-image  0.15s ease-in-out;
+    }
+  
+    &:hover,
+    &:focus {
+      outline: 0;
+  
+      &::before {
+        background-image: url(../img/icons/ic-search-white.svg);
+      }
+    }
+  }
+}

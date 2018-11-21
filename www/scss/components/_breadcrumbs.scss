@@ -1,0 +1,123 @@
+/*------------------------------------------*/
+/*  BREADCRUMBS
+/*------------------------------------------*/
+.breadcrumbs {
+  margin-top: -8px;
+  margin-bottom: 8px;
+  list-style: none;
+  list-style-type: none;
+
+  li {
+    display: none;
+    font-family: $secondFont;
+    font-size: rem(15);
+    color: #000;
+    text-transform: uppercase;
+
+    @media (min-width: 992px) {
+      display: inline-block;
+      font-family: $mainFont;
+      font-size: rem(13);
+      text-transform: none;
+    }
+
+    &:last-child {
+      display: inline-block;
+    }
+  }
+
+  a {
+    position: relative;
+    display: inline-block;
+    padding-left: 25px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: $textColor;
+
+    @media (min-width: 992px) {
+      padding-left: 0;
+      font-family: $mainFont;
+      color: $mainBlue;
+      transition: color 0.15s ease-in-out;
+    }
+
+    &:hover,
+    &:focus {
+      color: $mainRed;
+    }
+
+    &:before {
+      content:"\f053";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'FontAwesome';
+      color: $mainRed;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 7px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: rgba($mainBlue, 0.25);
+      transition: background-color 0.15s ease-in-out;
+      display: none;
+
+      @media (min-width: 992px) {
+        display: block;
+      }
+    }
+
+    &:hover:after {
+      background-color: rgba($mainRed, 0.25);
+    }
+  }
+
+  &-arrow {
+    margin-right: 8px;
+    color: #B0B0B0;
+    display: none;
+
+    @media (min-width: 992px) {
+      display: inline-block;
+      margin-left: 8px;
+    }
+  }
+
+  .fa {
+    display: inline-block;
+    margin-right: 8px;
+    vertical-align: middle;
+    color: #B0B0B0;
+
+    &-long-arrow-right {
+      display: none;
+
+      @media (min-width: 992px) {
+        display: inline-block;
+        margin-left: 8px;
+      }
+    }
+
+    &-chevron-left {
+      color: $mainRed;
+
+      @media (min-width: 992px) {
+        display: none;
+      }
+    }
+  }
+
+  .current-item {
+    color: #B0B0B0;
+    text-decoration: none;
+  }
+}

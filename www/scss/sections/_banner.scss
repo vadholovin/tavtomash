@@ -1,0 +1,22 @@
+/*------------------------------------------*/
+/*  BANNER
+/*------------------------------------------*/
+.banner {
+
+  .container {
+    text-align: center;
+
+    @media (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+  }
+
+  [class*="col-"] {
+    padding: 0;
+  }
+
+  &-pic {
+    display: inline-block;
+  }
+}

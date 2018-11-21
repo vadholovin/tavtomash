@@ -1,0 +1,28 @@
+/*------------------------------------------*/
+/*  PRODUCT DIGITS
+/*------------------------------------------*/
+.product-digits {
+
+  & > p {
+    display: inline-block;
+    font-size: rem(12);
+
+    @media (min-width: 992px) {
+      text-align: center;
+      font-size: rem(15);
+    }
+  }
+
+  p:first-child {
+    margin-right: 24px;
+  }
+
+  span {
+    font-weight: bold;
+    font-size: rem(21);
+  }
+
+  &--single {
+    margin-bottom: 20px;
+  }
+}

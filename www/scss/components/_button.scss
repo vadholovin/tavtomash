@@ -1,0 +1,49 @@
+/*------------------------------------------*/
+/*  BUTTONS
+/*------------------------------------------*/
+.button {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 8px 15px;
+  user-select: none;
+  border: 0;
+  border-radius: 5px;
+  font-family: $secondFont;
+  font-size: rem(13);
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.15s ease-in-out, background 0.15s ease-in-out;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    padding: 8px 15px;
+    border: 1.5px solid $mainBlue;
+    background: $mainBlue;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: #102074;
+    }
+  }
+
+  &-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.8);
+
+    &:hover,
+    &:focus {
+      background: rgba(255, 255, 255, 0.2);
+    }
+  }
+}

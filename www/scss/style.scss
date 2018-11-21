@@ -1,0 +1,54 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/functions',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendor/normalize',
+  'vendor/reset';
+
+// 3. Base stuff
+@import
+  'base/base',
+  // 'base/fonts',
+  'base/typography',
+  'base/helpers',
+  'base/grid';
+  
+
+// 4. Components
+@import
+  'components/logo',
+  'components/hamburger',
+  'components/search-form',
+  'components/button',
+  'components/nav',
+  'components/cart-link',
+  'components/breadcrumbs',
+  'components/tocart',
+  'components/product-digits',
+  'components/pagination',
+  'components/modal-form';
+
+// 5. Layout-related sections
+@import
+  'layout/header',
+  'layout/sidebar',
+  'layout/main',
+  'layout/footer';
+
+// 6. Sections
+@import
+  'sections/banner';
+
+// 6. Page-specific styles
+@import
+  // 'pages/home',
+  'pages/catalog',
+  'pages/catalog-list',
+  'pages/product';
+

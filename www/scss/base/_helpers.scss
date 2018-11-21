@@ -1,0 +1,56 @@
+/*------------------------------------------*/
+/*  HELPERS
+/*------------------------------------------*/
+
+.clearfix:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/**
+ * Hide text while making it readable for screen readers
+ */
+.hide-text {
+  overflow: hidden;
+  padding: 0;
+  text-indent: 101%;
+  white-space: nowrap;
+}
+
+/**
+ * Hide element while making it readable for screen readers
+ */
+.sr-only {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+  top: auto;
+  overflow: hidden;
+}
+
+.is-hidden {
+  display: none !important;
+}
+
+.is-hidden-box {
+  visibility: hidden;
+  opacity: 0;
+  z-index: -100;
+}
+
+.ta-c {
+  text-align: center;
+}
+
+.m-a {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
